@@ -1,0 +1,7 @@
+# Activation de la reecriture du moteur du serveur Apache
+
+RewriteEngine On
+
+    # Si la racine du projet de l'app est chargee a partir de l'URL,
+    # Effectuer une redirection vers la page public
+    RewriteRule ^(.*)$ public/

@@ -1,12 +1,11 @@
 <?php
+declare(strict_types=1);
+
 namespace App;
 
-use App\Trait\ChangeTimeZone;
-use App\HttpKernel\HttpKernel;
+use App\Zinc\HttpKernel\HttpKernel;
+use App\Zinc\Trait\ChangeTimeZone;
 use Psr\Container\ContainerInterface;
-
-
-      
 
     /**
      * ------------------------------------------------------------------------------------------------------
@@ -29,11 +28,15 @@ use Psr\Container\ContainerInterface;
      *      - Retourner cette réponse au contrôleur frontal 
      * 
      * @version 1.0.0
-     * @author Sami B <samisbdm@gmail.com>
+     * @author Jean-Claude AZIAHA <aziaha.formations@gmail.com>
      * ------------------------------------------------------------------------------------------------------
     */
-    class kernel extends HttpKernel
-    {   
+
+
+
+    
+    class Kernel extends HttpKernel
+    {
         use ChangeTimeZone;
 
         public function __construct(ContainerInterface $container)
@@ -41,6 +44,4 @@ use Psr\Container\ContainerInterface;
             $this->changeTimeZone("Europe/Paris");
             parent::__construct($container);
         }
-
-        
-    }  
+    }

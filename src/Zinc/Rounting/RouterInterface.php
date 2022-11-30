@@ -1,5 +1,6 @@
 <?php
-namespace App\Rounting;
+namespace App\Zinc\Rounting;
+
 
     Interface RouterInterface
     {   

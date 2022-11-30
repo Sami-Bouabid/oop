@@ -1,5 +1,6 @@
 <?php
-namespace App\HttpKernel;
+namespace App\Zinc\HttpKernel;
+
 
 use Symfony\Component\HttpFoundation\Response;
 

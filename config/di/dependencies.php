@@ -1,22 +1,22 @@
 <?php
 
+use App\Zinc\Routing\Router;
+use App\Zinc\Routing\RouterInterface;
+use App\Controller\Welcome\WelcomeController;
 use Symfony\Component\HttpFoundation\Request;
 
     return [
-        
-        // La requete
+
+        // La requête
         Request::class => Request::createFromGlobals(),
 
-        // Liste des controllers
-        "controllers" => [
-            //
+        // Liste des contrôleurs
+        'controllers'  => [
+            "WelcomeController" => WelcomeController::class
         ],
 
-        // Le router
-        DI\create(Router::class)
-        ->constructor(DI\get(Router::class), DI\get("controllers")),
+
+        // Le routeur
+        RouterInterface::class => DI\create(Router::class)->constructor(DI\get(Request::class), DI\get('controllers')),
 
     ];
-
-
-    //$router = new Router(Request $request, array $controllers);

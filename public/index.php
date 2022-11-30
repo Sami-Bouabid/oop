@@ -18,7 +18,14 @@
      * ------------------------------------------------------------
      */
 
+     use App\kernel;
+
     // Bootstrapping de l'app
     require __DIR__. "/../config/bootstrap.php";
 
-     dd($_ENV); 
+    // Creer une nouvelle instance du noyau (kernel) en lui passant le container en param
+     $kernel = new App\Kernel($container);
+
+     // Demander au noyau de soumettre la requête du client au système
+     // Récupérer la réponse correspondante
+     $response = $kernel->handleRequest();

@@ -5,7 +5,7 @@ namespace App\Zinc\Rounting;
 
 
 use ReflectionClass;
-use App\Zinc\Routing\Route;
+use App\Zinc\Rounting\Route;
 use App\Zinc\Rounting\RouterInterface;
 use Symfony\Component\HttpFoundation\Request;
 

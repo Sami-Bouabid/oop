@@ -1,9 +1,9 @@
 <?php
 
 use Twig\Environment;
-use App\Zinc\Routing\Router;
+use App\Zinc\Rounting\Router;
 use Twig\Loader\FilesystemLoader;
-use App\Zinc\Routing\RouterInterface;
+use App\Zinc\Rounting\RouterInterface;
 use App\Controller\Error\ErrorController;
 use App\Controller\Welcome\WelcomeController;
 use Symfony\Component\HttpFoundation\Request;

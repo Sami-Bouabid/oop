@@ -3,9 +3,10 @@ declare(strict_types=1);
 
 namespace App\Controller\Welcome;
 
-use App\Zinc\AbstractController\AbstractController;
+
 use App\Zinc\Rounting\Route;
 use Symfony\Component\HttpFoundation\Response;
+use App\Zinc\AbstractController\AbstractController;
 
 
     class WelcomeController extends AbstractController

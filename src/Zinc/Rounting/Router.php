@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Zinc\Routing;
+namespace App\Zinc\Rounting;
 
 
 use ReflectionClass;

@@ -11,8 +11,16 @@ use Symfony\Component\HttpFoundation\Response;
     {
         #[Route("/", name: "welcome.index", methods: ['GET'])]
         public function index() : Response
-        {
-            dd('welcome');
+        {   
+            $content = <<<HTML
+            <h1>Heelo</h1>
+HTML;                       
+            return new Response(
+                $content,
+                Response::HTTP_OK,
+                ['content-type' => 'text/html']
+            );
+            
         }
 
         #[Route("/edit/{id}", name: "edit", methods: ['GET'])]

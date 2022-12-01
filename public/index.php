@@ -33,3 +33,6 @@ use App\Kernel;
     // Demander au noyau de soumettre la requête du client au système
     // Récupérer la réponse correspondante
     $response = $kernel->handleRequest();
+    
+    // Le controller frontal envoie la reponse au client
+    $response->send();

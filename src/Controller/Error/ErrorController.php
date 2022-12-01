@@ -3,11 +3,20 @@ declare(strict_types=1);
 
 namespace App\Controller\Error;
 
+use Symfony\Component\HttpFoundation\Response;
+
     class ErrorController
     {
-        public function notFound()
+        public function notFound() : Response
         {
-            dd('Not found');
+            $response = new Response(
+                'Page not found',
+                Response::HTTP_NOT_FOUND,
+                ['content-type' => 'text/html']
+            );
+
+            return $response;
+
         }
 
     }
